@@ -1,0 +1,106 @@
+:root{
+      --width: 1920px;
+      --color_transition: color .3s ease-in-out;
+      --item-transition: transform 0.3s ease-in-out;
+      --back_color_tran: background-color 0.3s ease-in-out;
+      --sora: 'Sora', sans-serif;
+      --inter: 'Inter', sans-serif;
+      --poppins: 'Poppins', sans-serif;
+      --nav_color: #101011;
+      --red: #E10000;
+      --card-num-font: "SF Pro Display";
+}
+
+/* GENERAL STYLES */
+*{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+
+body{
+      font-family: var(--sora);
+      background-color: #242428;
+ 
+}
+
+a{
+      text-decoration: none;
+}
+
+li{
+      list-style: none;
+}
+
+button{
+      color: #FFF;
+      cursor: pointer;
+      font-family: var(--sora);
+}
+
+.main{
+      padding-top: 150px;
+}
+.cards_container{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+}
+.cards{
+      display: grid;
+      grid-template-columns: repeat(4, 390px);
+      margin: 0 auto;
+      gap: 40px;
+}
+.card{
+      display: flex;
+      height: 544px;
+      border-radius: 9px;
+      background: #1A1A1A;
+      color: #FFF;
+      justify-content: center; 
+
+      &_inner{
+            display: flex;
+            flex-direction: column;
+            gap: 68px;
+            padding: 20px;
+            transition: transform .5s ease-in-out;
+      }
+
+      &_top{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;            
+            &_num{
+                  font-family: var(--card-num-font);
+                  font-size: 68px;
+                  font-weight: 500;
+                  line-height: 68px; /* 100% */
+            }
+            &_svg{
+                  transition: var(--item-transition)
+            }
+            &_svg:hover{
+                  transform: rotate(45deg); 
+            }
+      }
+
+      &_text{
+            font-family: var(--sora);
+            &_title{
+                  font-size: 34px;
+                  font-weight: 600;
+                  line-height: 140%; /* 47.6px */
+            }
+            &_gen{
+                  padding-top: 32px;
+                  font-size: 18px;
+                  font-weight: 400;
+                  line-height: 180%; /* 32.4px */
+            }
+      }
+}
+.card_inner.lifted {
+      transform: translateY(-5px);
+}
