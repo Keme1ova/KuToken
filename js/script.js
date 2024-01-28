@@ -24,3 +24,12 @@ window.addEventListener("scroll", function(){
 
    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Обновить lastScrollTop к текущему положению скролла
 }, false);
+
+
+
+//burger menu
+document.querySelector('.burger').addEventListener('click', function(){
+    this.classList.toggle('active');
+    document.querySelector('.navbar').classList.toggle('open');
+}
+)

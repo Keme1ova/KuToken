@@ -1,278 +1,401 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;600;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="./styles/profile_style.css">
-      <title>My Profile</title>
-</head>
-<body>
-      <header id="header">
-            <nav class="header-nav">
-                  <p class="logo"><a href="#home">Kut<span>To</span>ken</a></p>
-                  <ul class="nav_list">
-                        <li class="nav_list-item"><a href="#about">О нас</a></li>
-                        <li class="nav_list-item"><a href="#token-assets">Токенизированные активы</a></li>
-                        <li class="nav_list-item"><a href="#blog">Блог</a></li>
-                        <li class="nav_list-item"><a href="#purchase">Как приобрести</a></li>
-                        <li class="nav_list-item"><a href="#contacts">Контакты</a></li>
-                        <li class="nav_list-item"><hr class="line"></li>
-                        <li class="nav_list-item"><a href="#technology">ТЕХНОЛОГИИ</a></li>
-                  </ul>
-                  <button class="log-out">Выйти из кабинета</button>
-            </nav>
-      </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;600;700&family=Sora:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/profile_style.css" />
+    <title>My Profile</title>
+  </head>
+  <body>
+    <header id="header">
+      <nav class="header-nav">
+        <p class="logo"><a href="#home">Kut<span>To</span>ken</a></p>
+        <ul class="nav_list">
+          <li class="nav_list-item"><a href="#about">О нас</a></li>
+          <li class="nav_list-item">
+            <a href="#token-assets">Токенизированные активы</a>
+          </li>
+          <li class="nav_list-item"><a href="#blog">Блог</a></li>
+          <li class="nav_list-item"><a href="#purchase">Как приобрести</a></li>
+          <li class="nav_list-item"><a href="#contacts">Контакты</a></li>
+          <li class="nav_list-item"><hr class="line" /></li>
+          <li class="nav_list-item"><a href="#technology">ТЕХНОЛОГИИ</a></li>
+        </ul>
+        <button class="log-out">Выйти из кабинета</button>
+      </nav>
+    </header>
 
-      <main class="main">
-            <section class="kuttoken section" id="kuttoken">
-                  <img src="./imgs/gold.png" alt="back" class="cover_img_kuttoken">
-                  <div class="change">
-                        <button class="cover change-btn" id="coverChangeBtn">
-                              Изменить обложку
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99992 2.66671C6.69843 2.66671 5.49869 2.77404 4.53572 2.90122C3.66907 3.01568 3.01556 3.66919 2.9011 4.53584C2.77392 5.49882 2.66659 6.69855 2.66659 8.00004C2.66659 9.30153 2.77392 10.5013 2.9011 11.4642C3.01556 12.3309 3.66907 12.9844 4.53572 13.0989C5.49869 13.226 6.69843 13.3334 7.99992 13.3334C9.30141 13.3334 10.5011 13.226 11.4641 13.0989C12.3308 12.9844 12.9843 12.3309 13.0987 11.4642C13.2259 10.5013 13.3333 9.30153 13.3333 8.00004C13.3333 6.69855 13.2259 5.49882 13.0987 4.53585C12.9843 3.66919 12.3308 3.01568 11.4641 2.90122C10.5011 2.77404 9.30141 2.66671 7.99992 2.66671ZM4.36115 1.57937C2.89661 1.77279 1.77267 2.89674 1.57925 4.36127C1.44627 5.3681 1.33325 6.62756 1.33325 8.00004C1.33325 9.37252 1.44627 10.632 1.57925 11.6388C1.77267 13.1033 2.89661 14.2273 4.36114 14.4207C5.36797 14.5537 6.62743 14.6667 7.99992 14.6667C9.3724 14.6667 10.6319 14.5537 11.6387 14.4207C13.1032 14.2273 14.2272 13.1033 14.4206 11.6388C14.5536 10.632 14.6666 9.37253 14.6666 8.00004C14.6666 6.62756 14.5536 5.3681 14.4206 4.36127C14.2272 2.89674 13.1032 1.77279 11.6387 1.57937C10.6319 1.4464 9.3724 1.33337 7.99992 1.33337C6.62743 1.33337 5.36797 1.4464 4.36115 1.57937Z" fill="#FCFCFD"/>
-                                    <path d="M5.99992 7.33329C6.7363 7.33329 7.33325 6.73634 7.33325 5.99996C7.33325 5.26358 6.7363 4.66663 5.99992 4.66663C5.26354 4.66663 4.66659 5.26358 4.66659 5.99996C4.66659 6.73634 5.26354 7.33329 5.99992 7.33329Z" fill="#FCFCFD"/>
-                                    <path d="M12.0808 8.47149L13.277 9.6677C13.2357 10.2918 13.1755 10.871 13.109 11.3853L11.138 9.4143C10.8776 9.15395 10.4555 9.15395 10.1952 9.4143L8.74746 10.862C7.96641 11.6431 6.70008 11.6431 5.91904 10.862L5.80465 10.7476C5.5443 10.4873 5.1222 10.4873 4.86185 10.7476L3.2558 12.3537C3.06975 12.1014 2.94527 11.7987 2.90109 11.4642C2.877 11.2817 2.85362 11.0908 2.83154 10.8923L3.91904 9.80482C4.70009 9.02377 5.96641 9.02377 6.74746 9.80482L6.86184 9.9192C7.12219 10.1796 7.5443 10.1796 7.80465 9.9192L9.25237 8.47149C10.0334 7.69044 11.2997 7.69044 12.0808 8.47149Z" fill="#FCFCFD"/>
-                              </svg>
-                        </button>
-                        <button class="profile change-btn" id="profileChangeBtn">
-                              Изменить профиль
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M2 14.6667C2 14.2985 2.29848 14 2.66667 14H13.3333C13.7015 14 14 14.2985 14 14.6667C14 15.0349 13.7015 15.3333 13.3333 15.3333H2.66667C2.29848 15.3333 2 15.0349 2 14.6667Z" fill="#FCFCFD"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.1381 2.08084C10.8777 1.82049 10.4556 1.82049 10.1953 2.08084L9.6095 2.66661L12 5.05713L12.5858 4.47137C12.8461 4.21102 12.8461 3.78891 12.5858 3.52856L11.1381 2.08084ZM4.6095 7.66661L8.66669 3.60942L11.0572 5.99994L7.00002 10.0571L4.6095 7.66661ZM3.66669 8.60942L3.33333 8.94277V11.3333H5.72386L6.05721 10.9999L3.66669 8.60942ZM9.25245 1.13803C10.0335 0.356984 11.2998 0.356984 12.0809 1.13803L13.5286 2.58575C14.3096 3.3668 14.3096 4.63313 13.5286 5.41418L6.66667 12.2761C6.41662 12.5262 6.07748 12.6666 5.72386 12.6666H3.33333C2.59695 12.6666 2 12.0697 2 11.3333V8.94277C2 8.58915 2.14048 8.25001 2.39052 7.99996L9.25245 1.13803Z" fill="#FCFCFD"/>
-                              </svg>
-                        </button>
-                  </div>
-            </section>
+    <main class="main">
+      <section class="kuttoken section" id="kuttoken">
+        <img src="./imgs/gold.png" alt="back" class="cover_img_kuttoken" />
+        <div class="change">
+          <button class="cover change-btn" id="coverChangeBtn">
+            Изменить обложку
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M7.99992 2.66671C6.69843 2.66671 5.49869 2.77404 4.53572 2.90122C3.66907 3.01568 3.01556 3.66919 2.9011 4.53584C2.77392 5.49882 2.66659 6.69855 2.66659 8.00004C2.66659 9.30153 2.77392 10.5013 2.9011 11.4642C3.01556 12.3309 3.66907 12.9844 4.53572 13.0989C5.49869 13.226 6.69843 13.3334 7.99992 13.3334C9.30141 13.3334 10.5011 13.226 11.4641 13.0989C12.3308 12.9844 12.9843 12.3309 13.0987 11.4642C13.2259 10.5013 13.3333 9.30153 13.3333 8.00004C13.3333 6.69855 13.2259 5.49882 13.0987 4.53585C12.9843 3.66919 12.3308 3.01568 11.4641 2.90122C10.5011 2.77404 9.30141 2.66671 7.99992 2.66671ZM4.36115 1.57937C2.89661 1.77279 1.77267 2.89674 1.57925 4.36127C1.44627 5.3681 1.33325 6.62756 1.33325 8.00004C1.33325 9.37252 1.44627 10.632 1.57925 11.6388C1.77267 13.1033 2.89661 14.2273 4.36114 14.4207C5.36797 14.5537 6.62743 14.6667 7.99992 14.6667C9.3724 14.6667 10.6319 14.5537 11.6387 14.4207C13.1032 14.2273 14.2272 13.1033 14.4206 11.6388C14.5536 10.632 14.6666 9.37253 14.6666 8.00004C14.6666 6.62756 14.5536 5.3681 14.4206 4.36127C14.2272 2.89674 13.1032 1.77279 11.6387 1.57937C10.6319 1.4464 9.3724 1.33337 7.99992 1.33337C6.62743 1.33337 5.36797 1.4464 4.36115 1.57937Z"
+                fill="#FCFCFD"
+              />
+              <path
+                d="M5.99992 7.33329C6.7363 7.33329 7.33325 6.73634 7.33325 5.99996C7.33325 5.26358 6.7363 4.66663 5.99992 4.66663C5.26354 4.66663 4.66659 5.26358 4.66659 5.99996C4.66659 6.73634 5.26354 7.33329 5.99992 7.33329Z"
+                fill="#FCFCFD"
+              />
+              <path
+                d="M12.0808 8.47149L13.277 9.6677C13.2357 10.2918 13.1755 10.871 13.109 11.3853L11.138 9.4143C10.8776 9.15395 10.4555 9.15395 10.1952 9.4143L8.74746 10.862C7.96641 11.6431 6.70008 11.6431 5.91904 10.862L5.80465 10.7476C5.5443 10.4873 5.1222 10.4873 4.86185 10.7476L3.2558 12.3537C3.06975 12.1014 2.94527 11.7987 2.90109 11.4642C2.877 11.2817 2.85362 11.0908 2.83154 10.8923L3.91904 9.80482C4.70009 9.02377 5.96641 9.02377 6.74746 9.80482L6.86184 9.9192C7.12219 10.1796 7.5443 10.1796 7.80465 9.9192L9.25237 8.47149C10.0334 7.69044 11.2997 7.69044 12.0808 8.47149Z"
+                fill="#FCFCFD"
+              />
+            </svg>
+          </button>
+          <button class="profile change-btn" id="profileChangeBtn">
+            Изменить профиль
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2 14.6667C2 14.2985 2.29848 14 2.66667 14H13.3333C13.7015 14 14 14.2985 14 14.6667C14 15.0349 13.7015 15.3333 13.3333 15.3333H2.66667C2.29848 15.3333 2 15.0349 2 14.6667Z"
+                fill="#FCFCFD"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M11.1381 2.08084C10.8777 1.82049 10.4556 1.82049 10.1953 2.08084L9.6095 2.66661L12 5.05713L12.5858 4.47137C12.8461 4.21102 12.8461 3.78891 12.5858 3.52856L11.1381 2.08084ZM4.6095 7.66661L8.66669 3.60942L11.0572 5.99994L7.00002 10.0571L4.6095 7.66661ZM3.66669 8.60942L3.33333 8.94277V11.3333H5.72386L6.05721 10.9999L3.66669 8.60942ZM9.25245 1.13803C10.0335 0.356984 11.2998 0.356984 12.0809 1.13803L13.5286 2.58575C14.3096 3.3668 14.3096 4.63313 13.5286 5.41418L6.66667 12.2761C6.41662 12.5262 6.07748 12.6666 5.72386 12.6666H3.33333C2.59695 12.6666 2 12.0697 2 11.3333V8.94277C2 8.58915 2.14048 8.25001 2.39052 7.99996L9.25245 1.13803Z"
+                fill="#FCFCFD"
+              />
+            </svg>
+          </button>
+        </div>
+      </section>
 
-            <div class="change_cover popup" id="coverPopup">
-                  <div class="change_cover-inner">
-                        <div class="cover_inner_cont">
-                              <div class="cover_top">
-                                    <h1>Редактировать обложку</h1>
-                                    <button class="update-btn" id="closeCoverPopup">Обновить</button>
-                              </div>
-                              <img src="./imgs/gold.png" alt="Cover image" class="cover_img">
-                              <div class="img_btn">
-                                    <button class="load-btn">Загрузить новое</button>
-                                    <button class="delete-btn">Удалить фото</button>
-                              </div>
-                        </div>
+      <div class="change_cover popup" id="coverPopup">
+        <div class="change_cover-inner">
+          <div class="cover_inner_cont">
+            <div class="cover_top">
+              <h1>Редактировать обложку</h1>
+              <button class="update-btn" id="closeCoverPopup">Обновить</button>
+            </div>
+            <img src="./imgs/gold.png" alt="Cover image" class="cover_img" />
+            <div class="img_btn">
+              <button class="load-btn">Загрузить новое</button>
+              <button class="delete-btn">Удалить фото</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="change_profile popup" id="profilePopup">
+        <div class="change_profile-inner">
+          <div class="inner_cont">
+            <div class="profile_title">Редактировать профиль</div>
+            <div class="profile_avatar">
+              <img src="./imgs/avatar.jpg" alt="Avatar" />
+              <div class="img_reduct">
+                <p class="reduct_title">Фото профиля</p>
+                <p class="advice">
+                  Мы рекомендуем изображение размером не менее 400x400 пикселей
+                </p>
+                <div class="img_btn">
+                  <button class="load-btn">Загрузить новое</button>
+                  <button class="delete-btn">Удалить фото</button>
+                </div>
+              </div>
+            </div>
+            <div class="profile_info">
+              <div class="profile_info_title">Личная информация</div>
+              <input
+                type="text"
+                class="fio_input input"
+                placeholder="Введите ФИО"
+              />
+              <input
+                type="email"
+                class="email_input input"
+                placeholder="Введите email"
+              />
+              <input
+                type="text"
+                class="num_input input"
+                placeholder="Введите номер телефона"
+              />
+              <input
+                type="text"
+                class="about_input input"
+                placeholder="О себе"
+              />
+            </div>
+            <button class="update-btn profile-btn" id="closeProfilePopup">
+              Обновить
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <section class="docs section" id="docs">
+        <div class="docs_section_container">
+          <div class="info_container">
+            <div class="info">
+              <div class="img_wrapper">
+                <img src="./imgs/avatar.jpg" alt="Avatar" class="avatar" />
+              </div>
+              <div class="fio">
+                <p class="name">Кадыр</p>
+                <p class="last_name">Юсупов</p>
+              </div>
+              <p class="slogan">
+                “ Я тут, потому что я должен стать самым крутым игроком в мире
+                токенов! ”
+              </p>
+              <div class="contact-info">
+                <div class="email">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M8.00016 13.3334C10.9457 13.3334 13.3335 10.9456 13.3335 8.00004C13.3335 5.05452 10.9457 2.66671 8.00016 2.66671C5.05464 2.66671 2.66683 5.05452 2.66683 8.00004C2.66683 10.9456 5.05464 13.3334 8.00016 13.3334ZM8.00016 14.6667C11.6821 14.6667 14.6668 11.6819 14.6668 8.00004C14.6668 4.31814 11.6821 1.33337 8.00016 1.33337C4.31826 1.33337 1.3335 4.31814 1.3335 8.00004C1.3335 11.6819 4.31826 14.6667 8.00016 14.6667Z"
+                      fill="#777E91"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M9.16429 12.1178C9.65676 11.1329 9.99984 9.67888 9.99984 8.00004C9.99984 6.3212 9.65676 4.86722 9.16429 3.88228C8.63195 2.81759 8.14321 2.66671 7.99984 2.66671C7.85647 2.66671 7.36773 2.81759 6.83538 3.88228C6.34292 4.86722 5.99984 6.3212 5.99984 8.00004C5.99984 9.67888 6.34292 11.1329 6.83538 12.1178C7.36773 13.1825 7.85647 13.3334 7.99984 13.3334C8.14321 13.3334 8.63195 13.1825 9.16429 12.1178ZM7.99984 14.6667C9.84079 14.6667 11.3332 11.6819 11.3332 8.00004C11.3332 4.31814 9.84079 1.33337 7.99984 1.33337C6.15889 1.33337 4.6665 4.31814 4.6665 8.00004C4.6665 11.6819 6.15889 14.6667 7.99984 14.6667Z"
+                      fill="#777E91"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M14.6339 8.66671C14.6557 8.44744 14.6668 8.22504 14.6668 8.00004C14.6668 7.77504 14.6557 7.55264 14.6339 7.33337H1.36641C1.34464 7.55264 1.3335 7.77504 1.3335 8.00004C1.3335 8.22504 1.34464 8.44744 1.36641 8.66671H14.6339Z"
+                      fill="#777E91"
+                    />
+                  </svg>
+                  dr.kadyr@gmail.com
+                </div>
+              </div>
+              <div class="contact-info">
+                <div class="phone">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_631_4993)">
+                      <path
+                        d="M14.26 13.0536L12.9901 14.3235C12.9901 14.3235 9.69024 15.7377 4.97619 11.0237C0.262145 6.30963 1.67636 3.0098 1.67636 3.0098L2.94631 1.73984C3.52006 1.1661 4.46895 1.23353 4.95579 1.88265L6.16797 3.4989C6.56609 4.02972 6.5133 4.77252 6.04411 5.24171L4.97619 6.30963C4.97619 6.30963 4.97619 7.25244 6.86181 9.13806C8.74743 11.0237 9.69024 11.0237 9.69024 11.0237L10.7582 9.95575C11.2273 9.48656 11.9701 9.43377 12.501 9.83189L14.1172 11.0441C14.7663 11.5309 14.8338 12.4798 14.26 13.0536Z"
+                        fill="#777E91"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_631_4993">
+                        <rect width="16" height="16" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  +7 (664)88 99 66
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="docs_container">
+            <div class="docs_cards">
+              <p class="title">Договоры</p>
+              <div class="cards">
+                <div class="card">
+                  <img src="./imgs/Card images.png" alt="Agreement" />
+                  <div class="doc_info">
+                    <p class="doc_name">Договор Токенизации</p>
+                    <p class="doc_date">12/02/2024</p>
                   </div>
+                </div>
+
+                <div class="card">
+                  <img src="./imgs/Card images.png" alt="Agreement" />
+                  <div class="doc_info">
+                    <p class="doc_name">Договор Токенизации</p>
+                    <p class="doc_date">12/02/2024</p>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <img src="./imgs/Card images.png" alt="Agreement" />
+                  <div class="doc_info">
+                    <p class="doc_name">Договор Токенизации</p>
+                    <p class="doc_date">12/02/2024</p>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div class="change_profile popup" id="profilePopup">
-                  <div class="change_profile-inner">
-                        <div class="inner_cont">
-                              <div class="profile_title">
-                                    Редактировать профиль
-                              </div>
-                              <div class="profile_avatar">
-                                    <img src="./imgs/avatar.jpg" alt="Avatar">
-                                    <div class="img_reduct">
-                                          <p class="reduct_title">Фото профиля</p>
-                                          <p class="advice">Мы рекомендуем изображение размером не менее 400x400 пикселей</p>
-                                          <div class="img_btn">
-                                                <button class="load-btn">Загрузить новое</button>
-                                                <button class="delete-btn">Удалить фото</button>
-                                          </div>
-                                    </div>
-                              </div>
-                              <div class="profile_info">
-                                    <div class="profile_info_title">Личная информация</div>
-                                    <input type="text" class="fio_input input" placeholder="Введите ФИО">
-                                    <input type="email" class="email_input input" placeholder="Введите email">
-                                    <input type="text" class="num_input input" placeholder="Введите номер телефона">
-                                    <input type="text" class="about_input input" placeholder="О себе">
-                              </div>
-                              <button class="update-btn profile-btn" id="closeProfilePopup">Обновить</button>
-                        </div>
+            <div class="docs_cards">
+              <p class="title">Печати</p>
+              <div class="cards">
+                <div class="card">
+                  <img src="./imgs/Card images.png" alt="Agreement" />
+                  <div class="doc_info">
+                    <p class="doc_name">Договор Токенизации</p>
+                    <p class="doc_date">12/02/2024</p>
                   </div>
+                </div>
+
+                <div class="card">
+                  <img src="./imgs/Card images.png" alt="Agreement" />
+                  <div class="doc_info">
+                    <p class="doc_name">Договор Токенизации</p>
+                    <p class="doc_date">12/02/2024</p>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <img src="./imgs/Card images.png" alt="Agreement" />
+                  <div class="doc_info">
+                    <p class="doc_name">Договор Токенизации</p>
+                    <p class="doc_date">12/02/2024</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="purchase section" id="purchase">
+        <div class="purchase_section_container">
+          <div class="inner_container">
+            <h1>Как приобрести Токены</h1>
+            <div class="purchase_info-container">
+              <div class="purchase_info-details">
+                <div class="left">
+                  <img
+                    src="./imgs/birja.png"
+                    alt="Биржи"
+                    width="409.079"
+                    height="409.14"
+                  />
+                  <div class="text">
+                    <p class="text_title">Биржи</p>
+                    <p class="text_gen">
+                      незаменимый элемент в индустрии и строительстве. Прочность
+                      и устойчивость к коррозии делают его ключевым компонентом
+                      в производстве сплавов и защитных покрытий.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="purchase_info-details">
+                <div class="right">
+                  <div class="text">
+                    <p class="text_title">Ваш Токен</p>
+                    <p class="text_gen">
+                      незаменимый элемент в индустрии и строительстве. Прочность
+                      и устойчивость к коррозии делают его ключевым компонентом
+                      в производстве сплавов и защитных покрытий.
+                    </p>
+                  </div>
+                  <img
+                    src="./imgs/token.png"
+                    alt="Ваш Токен"
+                    width="409.079"
+                    height="409.14"
+                  />
+                </div>
+              </div>
+
+              <div class="purchase_info-details">
+                <div class="left">
+                  <img
+                    src="./imgs/get.png"
+                    alt="Kut приобретает"
+                    width="409.079"
+                    height="409.14"
+                  />
+                  <div class="text">
+                    <p class="text_title">Kut приобретает</p>
+                    <p class="text_gen">
+                      незаменимый элемент в индустрии и строительстве. Прочность
+                      и устойчивость к коррозии делают его ключевым компонентом
+                      в производстве сплавов и защитных покрытий.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="purchase_info-details">
+                <div class="right">
+                  <div class="text">
+                    <p class="text_title">Где хранить</p>
+                    <p class="text_gen">
+                      незаменимый элемент в индустрии и строительстве. Прочность
+                      и устойчивость к коррозии делают его ключевым компонентом
+                      в производстве сплавов и защитных покрытий.
+                    </p>
+                  </div>
+                  <img
+                    src="./imgs/save.png"
+                    alt="Где хранить"
+                    width="409.079"
+                    height="409.14"
+                  />
+                </div>
+              </div>
             </div>
 
-            <section class="docs section" id="docs">
-                  <div class="docs_section_container">
-                        <div class="info_container">
-                              <div class="info">
-                                    <div class="img_wrapper">
-                                          <img src="./imgs/avatar.jpg" alt="Avatar" class="avatar">
-                                    </div>
-                                    <div class="fio">
-                                          <p class="name">Кадыр</p>
-                                          <p class="last_name">Юсупов</p>
-                                    </div>
-                                    <p class="slogan">
-                                          “ Я тут, потому что я должен стать самым крутым игроком в мире токенов! ”
-                                    </p>
-                                    <div class="contact-info">
-                                          <div class="email">
-                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                      <path fill-rule="evenodd" clip-rule="evenodd" d="M8.00016 13.3334C10.9457 13.3334 13.3335 10.9456 13.3335 8.00004C13.3335 5.05452 10.9457 2.66671 8.00016 2.66671C5.05464 2.66671 2.66683 5.05452 2.66683 8.00004C2.66683 10.9456 5.05464 13.3334 8.00016 13.3334ZM8.00016 14.6667C11.6821 14.6667 14.6668 11.6819 14.6668 8.00004C14.6668 4.31814 11.6821 1.33337 8.00016 1.33337C4.31826 1.33337 1.3335 4.31814 1.3335 8.00004C1.3335 11.6819 4.31826 14.6667 8.00016 14.6667Z" fill="#777E91"/>
-                                                      <path fill-rule="evenodd" clip-rule="evenodd" d="M9.16429 12.1178C9.65676 11.1329 9.99984 9.67888 9.99984 8.00004C9.99984 6.3212 9.65676 4.86722 9.16429 3.88228C8.63195 2.81759 8.14321 2.66671 7.99984 2.66671C7.85647 2.66671 7.36773 2.81759 6.83538 3.88228C6.34292 4.86722 5.99984 6.3212 5.99984 8.00004C5.99984 9.67888 6.34292 11.1329 6.83538 12.1178C7.36773 13.1825 7.85647 13.3334 7.99984 13.3334C8.14321 13.3334 8.63195 13.1825 9.16429 12.1178ZM7.99984 14.6667C9.84079 14.6667 11.3332 11.6819 11.3332 8.00004C11.3332 4.31814 9.84079 1.33337 7.99984 1.33337C6.15889 1.33337 4.6665 4.31814 4.6665 8.00004C4.6665 11.6819 6.15889 14.6667 7.99984 14.6667Z" fill="#777E91"/>
-                                                      <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6339 8.66671C14.6557 8.44744 14.6668 8.22504 14.6668 8.00004C14.6668 7.77504 14.6557 7.55264 14.6339 7.33337H1.36641C1.34464 7.55264 1.3335 7.77504 1.3335 8.00004C1.3335 8.22504 1.34464 8.44744 1.36641 8.66671H14.6339Z" fill="#777E91"/>
-                                                </svg>
-                                                dr.kadyr@gmail.com
-                                          </div>
-                                    </div>
-                                    <div class="contact-info">
-                                          <div class="phone">
-                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                      <g clip-path="url(#clip0_631_4993)">
-                                                      <path d="M14.26 13.0536L12.9901 14.3235C12.9901 14.3235 9.69024 15.7377 4.97619 11.0237C0.262145 6.30963 1.67636 3.0098 1.67636 3.0098L2.94631 1.73984C3.52006 1.1661 4.46895 1.23353 4.95579 1.88265L6.16797 3.4989C6.56609 4.02972 6.5133 4.77252 6.04411 5.24171L4.97619 6.30963C4.97619 6.30963 4.97619 7.25244 6.86181 9.13806C8.74743 11.0237 9.69024 11.0237 9.69024 11.0237L10.7582 9.95575C11.2273 9.48656 11.9701 9.43377 12.501 9.83189L14.1172 11.0441C14.7663 11.5309 14.8338 12.4798 14.26 13.0536Z" fill="#777E91"/>
-                                                      </g>
-                                                      <defs>
-                                                      <clipPath id="clip0_631_4993">
-                                                      <rect width="16" height="16" fill="white"/>
-                                                      </clipPath>
-                                                      </defs>
-                                                </svg>
-                                                +7 (664)88 99 66
-                                          </div>
-                                    </div>
-                              </div>
-                        </div>
-                        <div class="docs_container">
-                              <div class="docs_cards">
-                                    <p class="title">
-                                          Договоры
-                                    </p>
-                                    <div class="cards">
-                                          <div class="card">
-                                                <img src="./imgs/Card images.png" alt="Agreement">
-                                                <div class="doc_info">
-                                                      <p class="doc_name">Договор Токенизации</p>
-                                                      <p class="doc_date">12/02/2024</p>
-                                                </div>
-                                          </div>
+            <button class="contact">Связаться с KDI</button>
+          </div>
+        </div>
+      </section>
+    </main>
 
-                                          <div class="card">
-                                                <img src="./imgs/Card images.png" alt="Agreement">
-                                                <div class="doc_info">
-                                                      <p class="doc_name">Договор Токенизации</p>
-                                                      <p class="doc_date">12/02/2024</p>
-                                                </div>
-                                          </div>
+    <footer>
+      <div class="footer_container">
+        <nav class="footer">
+          <ul class="nav_list">
+            <li class="nav_list-item"><a href="#about">О нас</a></li>
+            <li class="nav_list-item">
+              <a href="#token-assets">Токенизированные активы</a>
+            </li>
+            <li class="nav_list-item"><a href="#blog">Блог</a></li>
+            <li class="nav_list-item">
+              <a href="#purchase">Как приобрести</a>
+            </li>
+            <li class="nav_list-item"><a href="#contacts">Контакты</a></li>
+            <li class="nav_list-item"><hr class="line" /></li>
+            <li class="nav_list-item"><a href="#technology">ТЕХНОЛОГИИ</a></li>
+          </ul>
+          <p class="logo logo-footer">
+            <a href="#home">Kut<span>To</span>ken</a>
+          </p>
+        </nav>
+        <div class="privacy_policy">
+          <p>Design by ITMAG 2024</p>
+          <p class="policy">Политика конфиденциальности</p>
+        </div>
+      </div>
+    </footer>
 
-                                          <div class="card">
-                                                <img src="./imgs/Card images.png" alt="Agreement">
-                                                <div class="doc_info">
-                                                      <p class="doc_name">Договор Токенизации</p>
-                                                      <p class="doc_date">12/02/2024</p>
-                                                </div>
-                                          </div>
-                                    </div>
-                              </div>
-
-                              <div class="docs_cards">
-                                    <p class="title">
-                                          Печати
-                                    </p>
-                                    <div class="cards">
-                                          <div class="card">
-                                                <img src="./imgs/Card images.png" alt="Agreement">
-                                                <div class="doc_info">
-                                                      <p class="doc_name">Договор Токенизации</p>
-                                                      <p class="doc_date">12/02/2024</p>
-                                                </div>
-                                          </div>
-
-                                          <div class="card">
-                                                <img src="./imgs/Card images.png" alt="Agreement">
-                                                <div class="doc_info">
-                                                      <p class="doc_name">Договор Токенизации</p>
-                                                      <p class="doc_date">12/02/2024</p>
-                                                </div>
-                                          </div>
-
-                                          <div class="card">
-                                                <img src="./imgs/Card images.png" alt="Agreement">
-                                                <div class="doc_info">
-                                                      <p class="doc_name">Договор Токенизации</p>
-                                                      <p class="doc_date">12/02/2024</p>
-                                                </div>
-                                          </div>
-                                    </div>
-                              </div>
-                        </div>
-                  </div>
-            </section>
-
-            <section class="purchase section" id="purchase">
-                  <div class="purchase_section_container">
-                        <div class="inner_container">
-                              <h1>Как приобрести Токены</h1>
-                              <div class="purchase_info-container">
-                                    <div class="purchase_info-details">
-                                          <div class="left">
-                                                <img src="./imgs/birja.png" alt="Биржи" width="409.079" height="409.14">
-                                                <div class="text">
-                                                      <p class="text_title">Биржи</p>
-                                                      <p class="text_gen">незаменимый элемент в индустрии и строительстве. Прочность и устойчивость к коррозии делают его ключевым компонентом в производстве сплавов и защитных покрытий.</p>
-                                                </div>
-                                          </div>
-                                    </div>
-
-                                    <div class="purchase_info-details">
-                                          <div class="right">
-                                                <div class="text">
-                                                      <p class="text_title">Ваш Токен</p>
-                                                      <p class="text_gen">незаменимый элемент в индустрии и строительстве. Прочность и устойчивость к коррозии делают его ключевым компонентом в производстве сплавов и защитных покрытий.</p>
-                                                </div>
-                                                <img src="./imgs/token.png" alt="Ваш Токен" width="409.079" height="409.14">
-                                          </div>
-                                    </div>
-
-                                    <div class="purchase_info-details">
-                                          <div class="left">
-                                                <img src="./imgs/get.png" alt="Kut приобретает" width="409.079" height="409.14">
-                                                <div class="text">
-                                                      <p class="text_title">Kut приобретает</p>
-                                                      <p class="text_gen">незаменимый элемент в индустрии и строительстве. Прочность и устойчивость к коррозии делают его ключевым компонентом в производстве сплавов и защитных покрытий.</p>
-                                                </div>
-                                          </div>
-                                    </div>
-
-                                    <div class="purchase_info-details">
-                                          <div class="right">
-                                                <div class="text">
-                                                      <p class="text_title">Где хранить</p>
-                                                      <p class="text_gen">незаменимый элемент в индустрии и строительстве. Прочность и устойчивость к коррозии делают его ключевым компонентом в производстве сплавов и защитных покрытий.</p>
-                                                </div>
-                                                <img src="./imgs/save.png" alt="Где хранить" width="409.079" height="409.14">
-                                          </div>
-                                    </div>
-                              </div>
-
-                              <button class="contact">Связаться с KDI</button>
-                        </div>
-                  </div>
-            </section>
-      </main>
-
-      <footer>
-            <div class="footer_container">
-                  <nav class="footer">
-                        <ul class="nav_list">
-                              <li class="nav_list-item"><a href="#about">О нас</a></li>
-                              <li class="nav_list-item"><a href="#token-assets">Токенизированные активы</a></li>
-                              <li class="nav_list-item"><a href="#blog">Блог</a></li>
-                              <li class="nav_list-item"><a href="#purchase">Как приобрести</a></li>
-                              <li class="nav_list-item"><a href="#contacts">Контакты</a></li>
-                              <li class="nav_list-item"><hr class="line"></li>
-                              <li class="nav_list-item"><a href="#technology">ТЕХНОЛОГИИ</a></li>
-                        </ul>
-                        <p class="logo logo-footer"><a href="#home">Kut<span>To</span>ken</a></p>
-                  </nav>
-                  <div class="privacy_policy">
-                        <p>Design by ITMAG 2024</p>
-                        <p class="policy">Политика конфиденциальности</p>
-                  </div>
-            </div>
-      </footer>
-
-      <script src="./js/profile_main.js"></script>
-</body>
+    <script src="./js/profile_main.js"></script>
+  </body>
 </html>
